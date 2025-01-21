@@ -1,0 +1,9 @@
+{
+  "name": "supabase_py_1030",
+  "version": "0.1.0",
+  "author": "Andrew Smith <a.smith@silentworks.co.uk>",
+  "description": "Testing inserting into a database table",
+  "devDependencies": {
+    "supabase": "^2.2.1"
+  }
+}
