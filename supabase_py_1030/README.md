@@ -7,7 +7,7 @@ Note the Supabase CLI requires Docker in order to run
 ### Copy the project down
 
 ```sh
-npx degit silentworks/sb-python-issues/supabase_py_1030
+npx degit silentworks/sb-python-issues/supabase_py_1030 supabase_py_1030
 cd supabase_py_1030
 npm install
 ```
