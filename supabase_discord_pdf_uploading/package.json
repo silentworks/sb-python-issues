@@ -4,6 +4,6 @@
   "author": "Andrew Smith <a.smith@silentworks.co.uk>",
   "description": "Test uploading a pdf into storage",
   "devDependencies": {
-    "supabase": "^2.15.5"
+    "supabase": "^2.15.2"
   }
 }
