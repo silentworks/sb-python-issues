@@ -1,0 +1,9 @@
+{
+  "name": "supabase_py_discord_pdf_uploading",
+  "version": "0.1.0",
+  "author": "Andrew Smith <a.smith@silentworks.co.uk>",
+  "description": "Test uploading a pdf into storage",
+  "devDependencies": {
+    "supabase": "^2.15.5"
+  }
+}
