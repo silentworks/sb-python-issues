@@ -25,3 +25,5 @@ Now run the project using `uv`:
 ```sh
 uv run uvicorn app.main:app --reload
 ```
+
+Then visit http://127.0.0.1:8000/docs and test the signin and signout endpoints from different browsers.
