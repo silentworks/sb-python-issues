@@ -1,0 +1,9 @@
+{
+  "name": "supabase_phone_password_signup",
+  "version": "0.1.0",
+  "author": "Andrew Smith <a.smith@silentworks.co.uk>",
+  "license": "MIT",
+  "devDependencies": {
+    "supabase": "^2.15.8"
+  }
+}
