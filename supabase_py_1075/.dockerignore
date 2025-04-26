@@ -1,0 +1,6 @@
+# .dockerignore
+.venv
+supabase
+.env.example
+package-lock.json
+package.json
