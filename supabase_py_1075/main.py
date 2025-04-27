@@ -16,13 +16,36 @@ app = FastAPI()
 async def get_supabase_client():
     supabase = await acreate_client(
         SUPABASE_URL, SUPABASE_ANON_KEY,
-        options=AsyncClientOptions(postgrest_client_timeout=Timeout(None))
+        # options=AsyncClientOptions(postgrest_client_timeout=Timeout(None))
+    )  # Creates a new client per request
+    return supabase
+
+async def get_supabase_httpx_client():
+    transport = AsyncHTTPTransport(
+        retries=10,
+        http2=True,
+        limits=Limits(
+            max_connections=1,
+            max_keepalive_connections=1,
+            keepalive_expiry=None,
+        )
+    )
+    client = AsyncClient(transport=transport)
+    supabase = await acreate_client(
+        SUPABASE_URL, SUPABASE_ANON_KEY,
+        options=AsyncClientOptions(httpx_client=client)
     )  # Creates a new client per request
     return supabase
 
 
 @app.get("/")
 async def test_supabase(supabase: Client = Depends(get_supabase_client)):
+    """A route that uses Supabase."""
+    res = await supabase.table("cities").select("*").limit(1).execute()
+    return res
+
+@app.get("/s/httpx")
+async def test_supabase_httpx(supabase: Client = Depends(get_supabase_httpx_client)):
     """A route that uses Supabase."""
     res = await supabase.table("cities").select("*").limit(1).execute()
     return res
