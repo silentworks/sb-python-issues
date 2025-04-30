@@ -1,0 +1,9 @@
+{
+  "name": "supabase_admin_delete_user",
+  "version": "0.1.0",
+  "author": "Andrew Smith <a.smith@silentworks.co.uk>",
+  "description": "Testing deleting user with the admin api",
+  "devDependencies": {
+    "supabase": "^2.2.1"
+  }
+}
