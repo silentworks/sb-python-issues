@@ -1,0 +1,16 @@
+[project]
+name = "supabase_admin_delete_user"
+version = "0.1.0"
+description = "Testing deleting user with the admin api"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[standard]>=0.115.12",
+    "python-dotenv>=1.0.1",
+    "supabase>=2.15.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.2",
+]
