@@ -1,0 +1,13 @@
+{
+  "name": "supabase_functions_error_handling",
+  "version": "0.1.0",
+  "author": "Andrew Smith <a.smith@silentworks.co.uk>",
+  "description": "Test error handling in Supabase functions",
+  "devDependencies": {
+    "supabase": "^2.22.12"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "dotenv": "^16.5.0"
+  }
+}
